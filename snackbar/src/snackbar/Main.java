@@ -15,12 +15,12 @@ public class Main {
         VendingMachine office = new VendingMachine("Office");
 
         // food VM
-        Snack chips = new Snack("Chips", 36, 1.75, food.getId(), "Food");
-        Snack chocolateBar = new Snack("Chocolate Bar", 36, 1.00, food.getId(), "Food");
-        Snack pretzel = new Snack("Pretzel", 30, 2.00, food.getId(), "Food");
+        Snack chips = new Snack("Chips", 36, 1.75, food.getId());
+        Snack chocolateBar = new Snack("Chocolate Bar", 36, 1.00, food.getId());
+        Snack pretzel = new Snack("Pretzel", 30, 2.00, food.getId());
         // water VM
-        Snack soda = new Snack("Soda", 24, 2.50, drink.getId(), "Drink");
-        Snack water = new Snack("Water", 20, 2.75, drink.getId(), "Drink");
+        Snack soda = new Snack("Soda", 24, 2.50, drink.getId());
+        Snack water = new Snack("Water", 20, 2.75, drink.getId());
 
         // MVP
         jane.buySnack(3*soda.getCost());
@@ -62,11 +62,38 @@ public class Main {
         System.out.println("Stretch Goals");
         System.out.println();
 
-        System.out.println(chips);
-        System.out.println(chocolateBar);
-        System.out.println(pretzel);
-        System.out.println(soda);
-        System.out.println(water);
+        System.out.println("Snack: " + chips.getName());
+        System.out.println("Vending Machine: " + food.getName());
+        System.out.println("Quantity: " + chips.getQuantity());
+        System.out.println("Total Cost: " + df.format(chips.getTotalCost(chips.getQuantity())));
+        System.out.println();
+
+
+        System.out.println("Snack: " + chocolateBar.getName());
+        System.out.println("Vending Machine: " + food.getName());
+        System.out.println("Quantity: " + chocolateBar.getQuantity());
+        System.out.println("Total Cost: " + df.format(chocolateBar.getTotalCost(chocolateBar.getQuantity())));
+        System.out.println();
+
+
+        System.out.println("Snack: " + pretzel.getName());
+        System.out.println("Vending Machine: " + food.getName());
+        System.out.println("Quantity: " + pretzel.getQuantity());
+        System.out.println("Total Cost: " + df.format(pretzel.getTotalCost(pretzel.getQuantity())));
+        System.out.println();
+
+
+        System.out.println("Snack: " + soda.getName());
+        System.out.println("Vending Machine: " + drink.getName());
+        System.out.println("Quantity: " + soda.getQuantity());
+        System.out.println("Total Cost: " + df.format(soda.getTotalCost(soda.getQuantity())));
+        System.out.println();
+
+        System.out.println("Snack: " + water.getName());
+        System.out.println("Vending Machine: " + drink.getName());
+        System.out.println("Quantity: " + water.getQuantity());
+        System.out.println("Total Cost: " + df.format(water.getTotalCost(water.getQuantity())));
+        System.out.println();
 
 
     }
