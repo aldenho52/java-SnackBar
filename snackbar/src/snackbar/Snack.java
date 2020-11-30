@@ -1,13 +1,26 @@
 package snackbar;
 
 public class Snack {
+    // fields
     private static int maxId = 0;
+    
     private int id;
     private String name;
     private int quantity;
     private double cost;
     private int vendingMachineId;
 
+    // constructor
+    public Snack(String name, int quantity, double cost, int vendingMachineId) {
+        maxId++;
+        this.id = maxId;
+        this.name = name;
+        this.quantity = quantity;
+        this.cost = cost;
+        this.vendingMachineId = vendingMachineId;
+    }
+
+    // getters and setters
     public int getId() {
         return id;
     }
@@ -32,6 +45,8 @@ public class Snack {
     public int getQuantity() {
         return quantity;
     }
+
+    // methods
     public void addQuantity(int amount) {
         this.quantity += amount;
     }
