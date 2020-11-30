@@ -1,9 +1,12 @@
 package snackbar;
+import java.text.DecimalFormat;
 
 public class Snack {
+    private static DecimalFormat df = new DecimalFormat("$#,##0.00");
+
     // fields
     private static int maxId = 0;
-    
+
     private int id;
     private String name;
     private int quantity;
@@ -57,4 +60,10 @@ public class Snack {
         return quantity * cost;
     }
     
+    @Override
+    public String toString() {
+        return "Snack: " + name +
+                " Vending Machine: " + vendingMachineId +
+                " Quantity: " + quantity + " Total Cost: " + df.format(quantity*cost);
+    }
 }
