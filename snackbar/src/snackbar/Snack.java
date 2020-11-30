@@ -12,15 +12,17 @@ public class Snack {
     private int quantity;
     private double cost;
     private int vendingMachineId;
+    private String vendingMachineName;
 
     // constructor
-    public Snack(String name, int quantity, double cost, int vendingMachineId) {
+    public Snack(String name, int quantity, double cost, int vendingMachineId, String vendingMachineName) {
         maxId++;
         this.id = maxId;
         this.name = name;
         this.quantity = quantity;
         this.cost = cost;
         this.vendingMachineId = vendingMachineId;
+        this.vendingMachineName = vendingMachineName;
     }
 
     // getters and setters
@@ -63,7 +65,7 @@ public class Snack {
     @Override
     public String toString() {
         return "Snack: " + name +
-                " Vending Machine: " + vendingMachineId +
+                " Vending Machine: " + vendingMachineName +
                 " Quantity: " + quantity + " Total Cost: " + df.format(quantity*cost);
     }
 }

@@ -10,17 +10,17 @@ public class Main {
         Customer jane = new Customer("Jane", 45.25);
         Customer bob = new Customer("Bob", 33.14);
 
-        VendingMachine drink = new VendingMachine("Drink");
         VendingMachine food = new VendingMachine("Food");
+        VendingMachine drink = new VendingMachine("Drink");
         VendingMachine office = new VendingMachine("Office");
 
         // food VM
-        Snack chips = new Snack("Chips", 36, 1.75, food.getId());
-        Snack chocolateBar = new Snack("Chocolate Bar", 36, 1.00, food.getId());
-        Snack pretzel = new Snack("Pretzel", 30, 2.00, food.getId());
+        Snack chips = new Snack("Chips", 36, 1.75, food.getId(), "Food");
+        Snack chocolateBar = new Snack("Chocolate Bar", 36, 1.00, food.getId(), "Food");
+        Snack pretzel = new Snack("Pretzel", 30, 2.00, food.getId(), "Food");
         // water VM
-        Snack soda = new Snack("Soda", 24, 2.50, drink.getId());
-        Snack water = new Snack("Water", 20, 2.75, drink.getId());
+        Snack soda = new Snack("Soda", 24, 2.50, drink.getId(), "Drink");
+        Snack water = new Snack("Water", 20, 2.75, drink.getId(), "Drink");
 
         // MVP
         jane.buySnack(3*soda.getCost());
